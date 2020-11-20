@@ -35,10 +35,10 @@ jobs:
       
       - shell: bash
         if: github.ref == 'refs/heads/main'
-        name: deployment
-      - uses: akhileshns/heroku-deploy@v3.6.8 # This is the action
-        with:
-          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-          heroku_app_name: "surf-forecast-ronaldo" #Must be unique in Heroku
-          heroku_email: "ronaldocuca@gmail.com"
+        - name: deployment
+          uses: akhileshns/heroku-deploy@v3.6.8 # This is the action
+          with:
+            heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+            heroku_app_name: "surf-forecast-ronaldo" #Must be unique in Heroku
+            heroku_email: "ronaldocuca@gmail.com"
   
