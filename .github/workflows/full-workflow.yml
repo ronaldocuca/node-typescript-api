@@ -32,10 +32,7 @@ jobs:
 
       - name: Run all tests
         run: yarn test 
-      
-      - shell: bash
-        if: github.ref == 'refs/heads/main'
-      
+           
       - name: deployment
         uses: akhileshns/heroku-deploy@v3.6.8 # This is the action
         with:
