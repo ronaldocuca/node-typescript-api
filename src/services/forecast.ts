@@ -40,6 +40,7 @@ export class Forecast {
     beach: Beach
   ): BeachForecast[] {
     return points.map((e) => ({
+      ...{},
       ...{
         lat: beach.lat,
         lng: beach.lng,
